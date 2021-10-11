@@ -14,11 +14,5 @@ public class Piece {
 		return board;
 	} //Apagar o set para  que ele não seja alterado
 
-	
-	
-	
-	
-	
-	
 
 }
