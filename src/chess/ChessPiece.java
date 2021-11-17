@@ -17,6 +17,10 @@ public abstract class ChessPiece extends Piece{
 		return color;
 	}//Apaguei o set pq não quero que uma cor seja modificada, apenas acessada
 	
+	public ChessPosition getChessPosition() {
+		return ChessPosition.fromPosition(position);
+	}
+	
 	protected boolean isThereOpponentPiece(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
 		return p != null && p.getColor() != color;
