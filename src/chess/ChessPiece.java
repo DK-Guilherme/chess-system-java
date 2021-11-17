@@ -7,6 +7,7 @@ import boardgame.Position;
 public abstract class ChessPiece extends Piece{
 	
 	private Color color;
+	private int moveCount;
 
 	public ChessPiece(Board board, Color color) {
 		super(board); //Repassa a chamada para o construtor da superclasse
@@ -16,6 +17,17 @@ public abstract class ChessPiece extends Piece{
 	public Color getColor() {
 		return color;
 	}//Apaguei o set pq não quero que uma cor seja modificada, apenas acessada
+	public int getMoveCount() {
+		return moveCount;
+	}
+	
+	public void increaseMoveCount() {
+		moveCount++;
+	}
+	
+	public void decreaseMoveCount() {
+		moveCount--;
+	}
 	
 	public ChessPosition getChessPosition() {
 		return ChessPosition.fromPosition(position);
